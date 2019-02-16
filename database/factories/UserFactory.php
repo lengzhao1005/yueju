@@ -21,7 +21,8 @@ $factory->define(App\Model\User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'password' => 123456,
         'remember_token' => str_random(10),
-        'is_admin'=>1,
+        'is_admin'=>0,
+        'is_active'=>1,
         'created_at' => $now,
         'updated_at' => $now,
     ];

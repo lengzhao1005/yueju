@@ -19,16 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('email',100)->unique();
             $table->string('phone',20)->nullable()->unique();
             $table->string('password');
+            $table->tinyInteger('is_admin')->default(0)->comment('是否是管理员；0：普通用户；1：普通管理；2：超管');
             $table->string('avatar')->default(0);
             $table->string('confirmation_token')->nullable();
             $table->smallInteger('is_active')->default(0);
-            $table->integer('questions_count')->default(0);
-            $table->integer('answers_count')->default(0);
-            $table->integer('comments_count')->default(0);
-            $table->integer('favorites_count')->default(0);
-            $table->integer('likes_count')->default(0);
-            $table->integer('followers_count')->default(0);
-            $table->integer('followings_count')->default(0);
             $table->string('settings')->nullable();
             $table->string('api_token',64)->nullable()->unique();
             $table->rememberToken();

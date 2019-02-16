@@ -39,13 +39,12 @@ class UserTableSeeder extends Seeder
 
         // 单独处理第一个用户的数据
         $user = \App\Model\User::find(1);
-        $user->name = '123';
+        $user->name = 'zhou';
         $user->email = '123456@qq.com';
         $user->phone = '13264706948';
         //指定为超管
         $user->is_admin = 2;
         $user->avatar = 'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/ZqM7iaP4CR.png?imageView2/1/w/200/h/200';
         $user->save();
-
     }
 }
