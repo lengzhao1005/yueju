@@ -16,12 +16,15 @@ Route::group(['namespace'=>'Admin','middleware'=>['auth','admin']],function(){
     Route::resource('roles','Rbac\RoleController',['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
     Route::resource('permissions','Rbac\PermissionController',['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
 
+    //=========================小区管理
+    Route::resource('plot', 'PlotController');
 });
 
 //==============================后台
 Route::group(['namespace'=>'Admin','middleware'=>['auth']],function(){
     //==========================获取数据列表
-    Route::get('table/user/','Rbac\ListController@adminUsers');
-    Route::get('table/permission/','Rbac\ListController@adminPermissions');
-    Route::get('table/role/','Rbac\ListController@adminRoles');
+    Route::get('table/user/','table\RbacListController@adminUsers');
+    Route::get('table/permission/','table\RbacListController@adminPermissions');
+    Route::get('table/role/','table\RbacListController@adminRoles');
+    Route::get('table/plot/','table\PlotListController@plotList');
 });

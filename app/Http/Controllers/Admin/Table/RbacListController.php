@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Rbac;
+namespace App\Http\Controllers\Admin\Table;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\PermissRepository;
 use Illuminate\Http\Request;
 
-class ListController extends Controller
+class RbacListController extends Controller
 {
     protected $repository;
 
