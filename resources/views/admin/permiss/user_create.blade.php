@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="layui-card">
-        <div class="layui-card-header">表单组合</div>
+        <div class="layui-card-header">添加管理员</div>
 
         <div class="layui-card-body" style="padding: 15px;">
             <form class="layui-form" action="{{ url('/admin/users') }}" method="post" lay-filter="component-form-group" enctype="multipart/form-data">

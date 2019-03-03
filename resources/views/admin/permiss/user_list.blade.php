@@ -35,7 +35,7 @@
             var csrf_token = "{{ csrf_token() }}";
             table.render({
                 elem: '#test'
-                ,url:"{{ url('admin/table/user') }}"
+                ,url:"{{ url('admin/ajax/user') }}"
                 ,cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 ,cols: [[
                     {type:'checkbox', fixed: 'left'}

@@ -3,9 +3,9 @@
 @section('content')
 
     <div class="layui-btn-group demoTable">
-        <a class="layui-btn layui-btn-normal" lay-href="{{ url('admin/plot/create') }}">
+        <a class="layui-btn layui-btn-normal" lay-href="{{ url('admin/shop/create') }}">
             <i class="layui-icon"></i>
-            添加小区
+            添加商铺
         </a>
 
     </div>
@@ -30,15 +30,17 @@
                 ,form = layui.form;
             table.render({
                 elem: '#test'
-                ,url:"{{ url('admin/ajax/plot') }}"
+                ,url:"{{ url('admin/ajax/shop') }}"
                 ,cellMinWidth: 150 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 ,cols: [[/*
                     {type:'checkbox', fixed: 'left'}
                     ,*/{field:'id', width:80, title: 'ID', sort: true}
                     ,{field:'code', width:150, title: '编号'}
-                    ,{field:'name', width:150, title: '名称'}
+                    ,{field:'construction', width:150, title: '结构'}
+                    ,{field:'address', width:150, title: '地址'}
                     ,{field:'tag', width:120, title: '标签'}
-                    ,{field:'address', width:120, title: '地址'}
+                    ,{field:'belongto', width:120, title: '所属人'}
+                    ,{field:'link_phone', width:120, title: '联系电话'}
                     ,{fixed: 'right', width:178, align:'center', toolbar: '#barTpl',title:'操作'}
                 ]]
                 ,page:true

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Table;
+namespace App\Http\Controllers\Admin\Ajax;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\PermissRepository;
 use Illuminate\Http\Request;
 
-class RbacListController extends Controller
+class RbacController extends Controller
 {
     protected $repository;
 

@@ -18,13 +18,22 @@ Route::group(['namespace'=>'Admin','middleware'=>['auth','admin']],function(){
 
     //=========================小区管理
     Route::resource('plot', 'PlotController');
+    //=========================商铺管理
+    Route::resource('shop', 'ShopController');
+    //=========================公司管理
+    Route::resource('company', 'CompanyController');
 });
 
-//==============================后台
-Route::group(['namespace'=>'Admin','middleware'=>['auth']],function(){
+
+Route::group(['namespace'=>'Admin\Ajax', 'prefix'=>'ajax', 'middleware'=>['auth']],function(){
     //==========================获取数据列表
-    Route::get('table/user/','table\RbacListController@adminUsers');
-    Route::get('table/permission/','table\RbacListController@adminPermissions');
-    Route::get('table/role/','table\RbacListController@adminRoles');
-    Route::get('table/plot/','table\PlotListController@plotList');
+    Route::get('user/','RbacController@adminUsers');
+    Route::get('permission/','RbacController@adminPermissions');
+    Route::get('role/','RbacController@adminRoles');
+
+    Route::get('plot/','PlotController@plotList');
+
+    Route::get('shop/','ShopController@shopList');
+
+    Route::get('company/', 'CompanyController@CompanyList');
 });

@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Model\Plot;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class PlotController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +13,7 @@ class PlotController extends Controller
      */
     public function index()
     {
-        return view('admin.plot.index');
+        return view('admin.company.index');
     }
 
     /**
@@ -25,7 +23,7 @@ class PlotController extends Controller
      */
     public function create()
     {
-        return view('admin.plot.create');
+        //
     }
 
     /**
@@ -36,17 +34,16 @@ class PlotController extends Controller
      */
     public function store(Request $request)
     {
-        dump($request->all());
-        die();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\Plot  $plot
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Plot $plot)
+    public function show($id)
     {
         //
     }
@@ -54,10 +51,10 @@ class PlotController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\Plot  $plot
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Plot $plot)
+    public function edit($id)
     {
         //
     }
@@ -66,10 +63,10 @@ class PlotController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Plot  $plot
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Plot $plot)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -77,10 +74,10 @@ class PlotController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\Plot  $plot
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Plot $plot)
+    public function destroy($id)
     {
         //
     }

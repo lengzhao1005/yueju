@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Table;
+namespace App\Http\Controllers\Admin\Ajax;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\PermissRepository;
 use App\Repositories\PlotRepository;
 use Illuminate\Http\Request;
 
-class PlotListController extends Controller
+class PlotController extends Controller
 {
     /*
      * 获取小区列表

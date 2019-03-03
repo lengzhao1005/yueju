@@ -3,9 +3,9 @@
 @section('content')
 
     <div class="layui-btn-group demoTable">
-        <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
+        {{--<button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
         <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
-        <button class="layui-btn" data-type="isAll">验证是否全选</button>
+        <button class="layui-btn" data-type="isAll">验证是否全选</button>--}}
 
         <a class="layui-btn layui-btn-normal" lay-href="{{ url('admin/permissions/create') }}">
             <i class="layui-icon"></i>
@@ -38,7 +38,7 @@
                 ,form = layui.form;
             table.render({
                 elem: '#test'
-                ,url:"{{ url('admin/table/permission') }}"
+                ,url:"{{ url('admin/ajax/permission') }}"
                 ,cellMinWidth: 150 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 ,cols: [[
                     {type:'checkbox', fixed: 'left'}
